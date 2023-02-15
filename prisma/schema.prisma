@@ -1,0 +1,192 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Users {
+  id                        Int      @id @default(autoincrement())
+  email                     String   @unique
+  name                      String
+  password                  String
+  phone                     String
+  address                   String
+  avatar                    String
+  gender                    Gender   @default(male)
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  
+  //    FOREIGN KEY
+  Shop                      Shop[]
+  Product_Rating            Product_Rating[]
+  Shop_Rating               Shop_Rating[]
+  Event_Posts               Event_Posts[]
+  Event_Post_Like           Event_Post_Like[]
+}
+
+model Admin {
+  id                        Int      @id @default(autoincrement())
+  email                     String   @unique
+  password                  String
+  avatar                    String
+  role                      Role
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+}
+
+model Product {
+  id                        Int       @id @default(autoincrement())
+  category_id               Int
+  shop_id                   Int
+  name                      String
+  price                     Float
+  description               String
+  images                    String    @db.LongText
+  createdAt                 DateTime  @default(now())
+  updatedAt                 DateTime  @updatedAt  
+  //    RELASI
+  Product_Category          Product_Category  @relation(fields: [category_id], references: [id], onDelete: Cascade)
+  Shop                      Shop              @relation(fields: [shop_id], references: [id], onDelete: Cascade)
+  //    FOREIGN KEY
+  Product_Rating            Product_Rating[]
+}
+
+model Product_Category {
+  id                        Int      @id @default(autoincrement())
+  name                      String
+  description               String?
+  icon                      String?
+  aggregate                 Int
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    FOREIGN KEY
+  Product                   Product[]
+}
+
+model Product_Rating {
+  id                        Int      @id @default(autoincrement())
+  product_id                Int
+  user_id                   Int
+  rating                    Int
+  comment                   String
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    RELASI
+  Product                   Product  @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  Users                     Users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model Shop {
+  id                        Int      @id @default(autoincrement())
+  user_id                   Int
+  name                      String
+  description               String?
+  phone                     String
+  address                   String
+  icon                      String?
+  verified                  Boolean?
+  province                  String?
+  city                      String? 
+  district                  String?
+  sub_district              String?
+  longitude                 String?
+  latitude                  String?
+  instagram                 String?
+  facebook                  String?
+  website                   String?
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    RELASI
+  Users                     Users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  //    FOREIGN KEY
+  Product                   Product[]
+  Shop_Rating               Shop_Rating[]
+}
+
+model Shop_Rating {
+  id                        Int      @id @default(autoincrement())
+  shop_id                   Int
+  user_id                   Int
+  rating                    Int
+  comment                   String
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    RELASI  
+  Users                     Users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  Shop                      Shop     @relation(fields: [shop_id], references: [id], onDelete: Cascade)
+}
+
+model Event {
+  id                        Int      @id @default(autoincrement())
+  name                      String
+  description               String
+  icon                      String
+  banner                    String
+  official                  String
+  venue                     String
+  instagram                 String
+  facebook                  String
+  maps                      String
+  start_date                String  
+  end_date                  String
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    FOREIGN KEY
+  Event_Posts               Event_Posts[]
+}
+
+model Event_Posts {
+  id                        Int      @id @default(autoincrement())
+  user_id                   Int
+  event_id                  Int
+  comment                   String
+  images                    String    @db.LongText
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  //    RELASI
+  Users                     Users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  Event                     Event    @relation(fields: [event_id], references: [id], onDelete: Cascade)
+  //    FOREIGN KEY
+  Event_Post_Like           Event_Post_Like[]
+}
+
+model Event_Post_Like {
+  id                        Int      @id @default(autoincrement())
+  user_id                   Int
+  event_post_id             Int
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+  
+  //    RELASI
+  Users                     Users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  Event_Posts               Event_Posts    @relation(fields: [event_post_id], references: [id], onDelete: Cascade)
+}
+
+model Main_Banner {
+  id                        Int      @id @default(autoincrement())
+  images                    String    @db.LongText
+  description               String
+  link                      String
+  aggregate                 Int
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+}
+
+enum Role {
+  admin
+  super_admin
+}
+
+enum Gender {
+  male
+  female
+}
+
+enum Verified {
+  true
+  false
+}
