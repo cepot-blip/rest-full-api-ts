@@ -28,7 +28,7 @@ export const EventPostLikeUpdate= async (req: Request, res: Response) => {
         if(!checkUniqueId){
             return res.status(404).json({
                 success : false,
-                msg : "Event Post Like Id not found!"
+                msg : "Id not found!"
             })
         }
 

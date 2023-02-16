@@ -5,7 +5,7 @@ import { UploaderDelete } from '../../controllers/Upload/UploaderDelete';
 
 export const UploaderRoutes = express.Router()
 
-UploaderRoutes.post("/uploader", authCheck, UploaderCreate)
+UploaderRoutes.post("/uploader/create", authCheck, UploaderCreate)
 UploaderRoutes.delete("/uploader/delete", authCheck, UploaderDelete)
 
 export default UploaderRoutes
