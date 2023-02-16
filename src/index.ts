@@ -1,3 +1,16 @@
+import { EventPostsLikeRoutes } from './routes/EventPostLike/EventPostLikeRoutes';
+import { CountRoutes } from './routes/Count/CountRoutes';
+import { UploaderRoutes } from './routes/Upload/UploaderRoutes';
+import { ShopRatingRoutes } from './routes/ShopRating/ShopRatingRoutes';
+import { ShopRoutes } from './routes/Shop/ShopRoutes';
+import { ProductRatingRoutes } from './routes/ProductRating/ProductRatingRoutes';
+import { ProductCategoryRoutes } from './routes/ProductCategory/ProductCategoryRoutes';
+import { ProductRoutes } from './routes/Product/ProductRoutes';
+import { AdminRoutes } from './routes/Admin/AdminRoutes';
+import { UsersRoutes } from './routes/Users/UsersRoutes';
+import { MainBannerRoutes } from './routes/MainBanner/MainBannerRoutes';
+import { EventPostRoutes } from './routes/EventPosts/EventPostRoutes';
+import { EventRoutes } from './routes/Event/EventRoutes';
 import express from "express"
 import cors from "cors"
 import env from "dotenv"
@@ -8,15 +21,6 @@ const PORT = process.env.PORT
 
 import { rateLimit } from "express-rate-limit"
 import helmet from "helmet"
-import UsersRoutes from './routes/Users/UsersRoutes';
-import AdminRoutes from './routes/Admin/AdminRoutes';
-import ProductRoutes from './routes/Product/ProductRoutes';
-import ProductCategoryRoutes from './routes/ProductCategory/ProductCategoryRoutes';
-import ProductRatingRoutes from './routes/ProductRating/ProductRatingRoutes';
-import ShopRoutes from './routes/Shop/ShopRoutes';
-import ShopRatingRoutes from './routes/ShopRating/ShopRatingRoutes';
-import UploaderRoutes from './routes/Upload/UploaderRoutes';
-import CountRoutes from './routes/Count/CountRoutes';
 
 
 
@@ -70,6 +74,10 @@ app.use("/api", ShopRoutes)
 app.use("/api", ShopRatingRoutes)
 app.use("/api", UploaderRoutes)
 app.use("/api", CountRoutes)
+app.use("/api", EventRoutes)
+app.use("/api", EventPostRoutes)
+app.use("/api", EventPostsLikeRoutes)
+app.use("/api", MainBannerRoutes)
 
 
 //		LISTENER

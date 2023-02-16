@@ -18,7 +18,6 @@ export const ProductRatingUpdate = async (req : Request, res : Response) => {
             }
         })
 
-
         const checkUniqueProductId = await ProductRatingModels.findFirst({
             where : {
                 id : parseInt(product_id)
@@ -31,14 +30,14 @@ export const ProductRatingUpdate = async (req : Request, res : Response) => {
             }
         })
 
-        if(checkUniqueProductId){
+        if(!checkUniqueProductId){
             return res.status(404).json({
                 success : false,
                 msg : "Product Id not found!"
             })
         }
 
-        if(checkUniqueUserId){
+        if(!checkUniqueUserId){
             return res.status(404).json({
                 success : false,
                 msg : "User Id not found!"

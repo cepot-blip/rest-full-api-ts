@@ -7,6 +7,11 @@ import { ShopRatingControllers } from './ShopRating/index';
 import { UploadControllers } from './Upload/index';
 import { UsersControllers } from './Users/index';
 import { ProductCategoryControllers } from './ProductCategory/index';
+import { EventControllers } from './Event/index';
+import { EventPostLikeControllers } from './EventPostLike/index';
+import { EventPostControllers } from './EventPosts/index';
+import { MainBannerControllers } from './MainBanner/index';
+
 
 export {
     AdminControllers,
@@ -17,5 +22,9 @@ export {
     ShopControllers,
     ShopRatingControllers,
     UploadControllers,
-    UsersControllers
+    UsersControllers,
+    EventControllers,
+    EventPostLikeControllers,
+    EventPostControllers,
+    MainBannerControllers
 }

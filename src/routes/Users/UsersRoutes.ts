@@ -1,11 +1,11 @@
+import { UsersAuth } from './../../controllers/Users/UsersAuth';
+import { UsersUpdate } from './../../controllers/Users/UsersUpdate';
+import { UsersRead } from './../../controllers/Users/UsersRead';
+import { UsersLogin } from './../../controllers/Users/UsersLogin';
+import { UsersCreate } from './../../controllers/Users/UsersCreate';
 import express from "express"
 import { rateLimit } from "express-rate-limit"
-import { AdminCreate } from '../../controllers/Admin/AdminCreate';
-import { AdminLogin } from '../../controllers/Admin/AdminLogin';
-import { AdminRead } from '../../controllers/Admin/AdminRead';
-import { AdminUpdate } from '../../controllers/Admin/AdminUpdate';
-import { AdminDelete } from '../../controllers/Admin/AdminDelete';
-import { AdminAuth } from '../../controllers/Admin/AdminAuth';
+import { UsersDelete } from '../../controllers/Users/UsersDelete';
 
 export const UsersRoutes = express.Router()
 
@@ -18,11 +18,11 @@ const LimitLogin = rateLimit({
 })
 
 //      CREATE USER ROUTES
-UsersRoutes.post("/admin/create", AdminCreate)
-UsersRoutes.post("/admin/login", AdminLogin, LimitLogin)
-UsersRoutes.post("/admin/read", AdminRead)
-UsersRoutes.put("/admin/update/:id", AdminUpdate)
-UsersRoutes.delete("/admin/delete", AdminDelete)
-UsersRoutes.get("/admin/auth", AdminAuth)
+UsersRoutes.post("/users/create", UsersCreate)
+UsersRoutes.post("/users/login", UsersLogin, LimitLogin)
+UsersRoutes.post("/users/read", UsersRead)
+UsersRoutes.put("/users/update/:id", UsersUpdate)
+UsersRoutes.delete("/users/delete", UsersDelete)
+UsersRoutes.get("/users/auth", UsersAuth)
 
 export default UsersRoutes                             

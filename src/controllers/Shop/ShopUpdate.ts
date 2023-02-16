@@ -18,28 +18,28 @@ export const ShopUpdate = async (req: Request, res: Response) => {
             instagram,
             facebook,
             website
-        }= await req.body
+        } = await req.body
 
-        const checkUniqueShopId = await ShopModels.findUnique({
+        const checkUniqueId = await ShopModels.findUnique({
             where: {
                 id: parseInt(id)
             }
         })
 
-        const checkUniqueUserId = await ShopModels.findUnique({
+        const checkUniqueUserId = await ShopModels.findFirst({
             where: {
                 id: parseInt(user_id)
             }
         })
 
-        if (!checkUniqueShopId) {
+        if (!checkUniqueId) {
             return res.status(404).json({
                 success: false,
-                msg: "Shop Id not found!"
+                msg: "Id not found!"
             })
         }
 
-        if (!checkUniqueUserId) {
+        if (checkUniqueUserId) {
             return res.status(404).json({
                 success: false,
                 msg: "User Id not found!"

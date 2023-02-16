@@ -44,7 +44,7 @@ export const ShopRatingUpdate = async (req : Request, res : Response) => {
             })
         }
 
-        if(checkUniqueShopId){
+        if(!checkUniqueShopId){
             return res.status(404).json({
                 success : false,
                 msg : "Shop Id not found!"
