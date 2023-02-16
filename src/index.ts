@@ -8,15 +8,16 @@ const PORT = process.env.PORT
 
 import { rateLimit } from "express-rate-limit"
 import helmet from "helmet"
-import ProductCategoryRoutes from './routes/ProductCategoryRoutes';
-import UsersRoutes from './routes/UsersRoutes';
-import AdminRoutes from './routes/AdminRoutes';
-import ProductRoutes from './routes/ProductRoutes';
-import ProductRatingRoutes from './routes/ProductRatingRoutes';
-import ShopRatingRoutes from './routes/ShopRating';
-import ShopRoutes from './routes/ShopRoutes';
-import UploaderRoutes from './routes/UploaderRoutes';
-import CountRoutes from './routes/CountRoutes';
+import UsersRoutes from './routes/Users/UsersRoutes';
+import AdminRoutes from './routes/Admin/AdminRoutes';
+import ProductRoutes from './routes/Product/ProductRoutes';
+import ProductCategoryRoutes from './routes/ProductCategory/ProductCategoryRoutes';
+import ProductRatingRoutes from './routes/ProductRating/ProductRatingRoutes';
+import ShopRoutes from './routes/Shop/ShopRoutes';
+import ShopRatingRoutes from './routes/ShopRating/ShopRatingRoutes';
+import UploaderRoutes from './routes/Upload/UploaderRoutes';
+import CountRoutes from './routes/Count/CountRoutes';
+
 
 
 //	RATE LIMIT, THE PROCESS OF LIMITING THE NUMBER OF USER/CLIENT REQUSET ON CERTAIN RESOURCES
