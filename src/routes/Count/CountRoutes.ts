@@ -1,7 +1,7 @@
 import express from "express"
 import CountRead from "../../controllers/Count/CountRead"
 
-export const CountRoutes = express.Router()
+const CountRoutes = express.Router()
 
 
 //      ROUTES

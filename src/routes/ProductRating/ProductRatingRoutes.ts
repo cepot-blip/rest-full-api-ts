@@ -4,7 +4,7 @@ import { ProductRatingRead } from '../../controllers/ProductRating/ProductRating
 import { ProductRatingUpdate } from '../../controllers/ProductRating/ProductRatingUpdate';
 import { ProductRatingDelete } from '../../controllers/ProductRating/ProductRatingDelete';
 
-export const ProductRatingRoutes = express.Router()
+const ProductRatingRoutes = express.Router()
 
 //      CREATE PRODUCT RATING ROUTES
 ProductRatingRoutes.post("/product-rating/create", ProductRatingCreate)

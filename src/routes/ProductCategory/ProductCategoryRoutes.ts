@@ -4,7 +4,7 @@ import { ProductCategoryRead } from '../../controllers/ProductCategory/ProductCa
 import { ProductCategoryUpdate } from '../../controllers/ProductCategory/ProductCategoryUpdate';
 import { ProductCategoryDelete } from '../../controllers/ProductCategory/ProductCategoryDelete';
 
-export const ProductCategoryRoutes = express.Router()
+const ProductCategoryRoutes = express.Router()
 
 //      CREATE PRODUCT ROUTES
 ProductCategoryRoutes.post("/product-category/create", ProductCategoryCreate)

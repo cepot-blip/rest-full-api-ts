@@ -5,7 +5,7 @@ import { MainBannerUpdate } from '../../controllers/MainBanner/MainBannerUpdate'
 import { MainBannerDelete } from '../../controllers/MainBanner/MainBannerDelete';
 
 
-export const MainBannerRoutes = express.Router()
+const MainBannerRoutes = express.Router()
 
 
 //      CREATE MAIN BANNER ROUTES

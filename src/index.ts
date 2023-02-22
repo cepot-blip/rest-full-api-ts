@@ -1,18 +1,18 @@
-import { EventPostsLikeRoutes } from './routes/EventPostLike/EventPostLikeRoutes';
-import { CountRoutes } from './routes/Count/CountRoutes';
-import { UploaderRoutes } from './routes/Upload/UploaderRoutes';
-import { ShopRatingRoutes } from './routes/ShopRating/ShopRatingRoutes';
-import { ShopRoutes } from './routes/Shop/ShopRoutes';
-import { ProductRatingRoutes } from './routes/ProductRating/ProductRatingRoutes';
-import { ProductCategoryRoutes } from './routes/ProductCategory/ProductCategoryRoutes';
-import { ProductRoutes } from './routes/Product/ProductRoutes';
-import { AdminRoutes } from './routes/Admin/AdminRoutes';
-import { UsersRoutes } from './routes/Users/UsersRoutes';
-import { MainBannerRoutes } from './routes/MainBanner/MainBannerRoutes';
-import { EventPostRoutes } from './routes/EventPosts/EventPostRoutes';
-import { EventRoutes } from './routes/Event/EventRoutes';
+import EventPostsLikeRoutes  from './routes/EventPostLike/EventPostLikeRoutes';
+import CountRoutes  from './routes/Count/CountRoutes';
+import UploaderRoutes  from './routes/Upload/UploaderRoutes';
+import ShopRatingRoutes  from './routes/ShopRating/ShopRatingRoutes';
+import ShopRoutes  from './routes/Shop/ShopRoutes';
+import ProductRatingRoutes  from './routes/ProductRating/ProductRatingRoutes';
+import ProductCategoryRoutes  from './routes/ProductCategory/ProductCategoryRoutes';
+import ProductRoutes  from './routes/Product/ProductRoutes';
+import AdminRoutes  from './routes/Admin/AdminRoutes';
+import UsersRoutes from './routes/Users/UsersRoutes';
+import MainBannerRoutes  from './routes/MainBanner/MainBannerRoutes';
+import EventPostRoutes  from './routes/EventPosts/EventPostRoutes';
+import EventRoutes  from './routes/Event/EventRoutes';
 import express from "express"
-import { rateLimit } from "express-rate-limit"
+import rateLimit  from "express-rate-limit"
 import helmet from "helmet"
 import cors from "cors"
 import env from "dotenv"

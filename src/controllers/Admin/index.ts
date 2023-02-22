@@ -4,6 +4,7 @@ import { AdminRead } from './AdminRead';
 import { AdminUpdate } from './AdminUpdate';
 import { AdminDelete } from './AdminDelete';
 import { AdminAuth } from './AdminAuth';
+import { SuperAdminAuth } from './SuperAdminAuth';
 
 
 /**
@@ -20,6 +21,6 @@ export const AdminControllers = {
     AdminRead,
     AdminUpdate,
     AdminDelete,
-    AdminAuth
-    
+    AdminAuth,
+    SuperAdminAuth
 }

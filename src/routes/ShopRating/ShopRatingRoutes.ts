@@ -4,7 +4,7 @@ import { ShopRatingReadAll } from '../../controllers/ShopRating/ShopRatingRead';
 import { ShopRatingUpdate } from '../../controllers/ShopRating/ShopRatingUpdate';
 import { ShopRatingDelete } from '../../controllers/ShopRating/ShopRatingDelete';
 
-export const ShopRatingRoutes = express.Router()
+const ShopRatingRoutes = express.Router()
 
 //      CREATE SHOP RATING ROUTES
 ShopRatingRoutes.post("/shop-rating/create", ShopRatingCreate)

@@ -6,7 +6,7 @@ import { ProductGetList } from '../../controllers/Product/ProductList';
 import { ProductUpdate } from '../../controllers/Product/ProductUpdate';
 import { ProductDelete } from '../../controllers/Product/ProductDelete';
 
-export const ProductRoutes = express.Router()
+const ProductRoutes = express.Router()
 
 //      CREATE PRODUCT ROUTES
 ProductRoutes.post("/product/create", ProductCreate)

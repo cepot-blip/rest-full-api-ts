@@ -5,7 +5,7 @@ import { ShopReadById } from '../../controllers/Shop/ShopReadById';
 import { ShopUpdate } from '../../controllers/Shop/ShopUpdate';
 import { ShopDelete } from '../../controllers/Shop/ShopDelete';
 
-export const ShopRoutes = express.Router()
+const ShopRoutes = express.Router()
 
 
 //      CREATE SHOP ROUTES

@@ -7,7 +7,7 @@ import express from "express"
 import { rateLimit } from "express-rate-limit"
 import { UsersDelete } from '../../controllers/Users/UsersDelete';
 
-export const UsersRoutes = express.Router()
+const UsersRoutes = express.Router()
 
 const LimitLogin = rateLimit({
 	windowMs: 15 * 60 * 1000,

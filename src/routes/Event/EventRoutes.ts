@@ -4,7 +4,7 @@ import { EventRead } from '../../controllers/Event/EventRead';
 import { EventUpdate } from '../../controllers/Event/EventUpdate';
 import { EventDelete } from '../../controllers/Event/EventDelete';
 
-export const EventRoutes = express.Router()
+const EventRoutes = express.Router()
 
 //      CREATE EVENT ROUTES
 EventRoutes.post("/event/create", EventCreate)

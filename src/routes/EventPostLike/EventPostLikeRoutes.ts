@@ -4,7 +4,7 @@ import { EventPostsLikeRead } from '../../controllers/EventPosts/EventPostsRead'
 import { EventPostLikeUpdate } from '../../controllers/EventPostLike/EventPostLikeUpdate';
 import { EventPostLikeDelete } from '../../controllers/EventPostLike/EventPostLikeDelete';
 
-export const EventPostsLikeRoutes = express.Router()
+const EventPostsLikeRoutes = express.Router()
 
 //      CREATE EVENT POST LIKE ROUTES
 EventPostsLikeRoutes.post("/event-post-like/create", EventPostLikeCreate)

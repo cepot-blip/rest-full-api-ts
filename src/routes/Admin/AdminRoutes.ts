@@ -1,3 +1,4 @@
+import { SuperAdminAuth } from './../../controllers/Admin/SuperAdminAuth';
 import express from "express"
 import { rateLimit } from "express-rate-limit"
 import { AdminCreate } from "../../controllers/Admin/AdminCreate";
@@ -6,7 +7,8 @@ import { AdminDelete } from "../../controllers/Admin/AdminDelete";
 import { AdminUpdate } from "../../controllers/Admin/AdminUpdate";
 import { AdminLogin } from '../../controllers/Admin/AdminLogin';
 import { AdminRead } from '../../controllers/Admin/AdminRead';
-export const AdminRoutes = express.Router()
+
+const AdminRoutes = express.Router()
 
 const LimitLogin = rateLimit({
 	windowMs: 15 * 60 * 1000,
@@ -23,5 +25,6 @@ AdminRoutes.post("/admin/read", AdminRead)
 AdminRoutes.put("/admin/update/:id", AdminUpdate)
 AdminRoutes.delete("/admin/delete", AdminDelete)
 AdminRoutes.get("/admin/auth", AdminAuth)
+AdminRoutes.get("/super-admin/auth", SuperAdminAuth)
 
 export default AdminRoutes                             
