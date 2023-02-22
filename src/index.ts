@@ -12,6 +12,8 @@ import { MainBannerRoutes } from './routes/MainBanner/MainBannerRoutes';
 import { EventPostRoutes } from './routes/EventPosts/EventPostRoutes';
 import { EventRoutes } from './routes/Event/EventRoutes';
 import express from "express"
+import { rateLimit } from "express-rate-limit"
+import helmet from "helmet"
 import cors from "cors"
 import env from "dotenv"
 env.config()
@@ -19,9 +21,15 @@ env.config()
 const app = express()
 const PORT = process.env.PORT
 
-import { rateLimit } from "express-rate-limit"
-import helmet from "helmet"
-
+/**
+ * @function limiter ini digunakan untuk melakukan rate limit pada aplikasi
+ * @param windowMs ini adalah waktu yang di tentukan untuk melakukan rate limit
+ * @param max ini adalah jumlah maksimal request yang diizinkan
+ * @param standardHeaders ini digunakan untuk menampilkan header pada response
+ * @param legacyHeaders ini digunakan untuk menampilkan header pada response
+ * @param message ini adalah pesan yang akan ditampilkan ketika melakukan rate limit
+ * @function app.use ini digunakan untuk menggunakan middleware
+ */
 
 
 //	RATE LIMIT, THE PROCESS OF LIMITING THE NUMBER OF USER/CLIENT REQUSET ON CERTAIN RESOURCES
