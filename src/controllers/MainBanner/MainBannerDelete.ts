@@ -1,7 +1,15 @@
 import { MainBannerModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
-
+/**
+ * @function MainBannerDelete ini digunakan untuk menghapus main banner
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data yang baru saja dihapus
+ * @function result ini digunakan untuk menampung data yang telah dihapus
+ * 
+ * @author cepot-blip
+ */
 
 export const MainBannerDelete = async (req: Request, res: Response) => {
     try {

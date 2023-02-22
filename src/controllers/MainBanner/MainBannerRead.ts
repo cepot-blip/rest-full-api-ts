@@ -1,6 +1,19 @@
 import { MainBannerModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
+/**
+ * @function MainBannerRead ini digunakan untuk membaca main banner
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini adalah halaman yang akan ditampilkan pada pagination
+ * @function limit ini adalah batas data yang akan ditampilkan pada pagination
+ * @function skip ini adalah data yang akan dilewati pada pagination
+ * @function filter ini adalah filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+ */
 
 export const MainBannerRead = async (req: Request, res: Response) => {
     try {

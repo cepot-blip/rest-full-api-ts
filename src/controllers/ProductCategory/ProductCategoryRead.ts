@@ -1,6 +1,19 @@
 import { Response, Request } from "express"
 import { ProductCategoryModels } from '../../models/Models';
 
+/**
+ * @function ProductCategoryRead ini digunakan untuk membaca kategori produk
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini adalah halaman yang akan ditampilkan
+ * @function limit ini adalah batas data yang akan ditampilkan
+ * @function skip ini adalah data yang akan dilewati
+ * @function filter ini adalah filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+*/
 
 export const ProductCategoryRead = async (req: Request, res: Response) => {
     try {

@@ -6,6 +6,14 @@ import { AdminDelete } from './AdminDelete';
 import { AdminAuth } from './AdminAuth';
 
 
+/**
+ * @export AdminControllers ini digunakan untuk mengexport semua controller yang ada di folder ini
+ * @returns mengembalikan semua controller yang ada di folder ini
+ * 
+ * @author cepot-blip
+ */
+
+
 export const AdminControllers = {
     AdminCreate,
     AdminLogin,

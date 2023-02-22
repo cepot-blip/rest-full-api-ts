@@ -2,6 +2,18 @@ import { EventPostsModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
 
+/**
+ * @function EventPostCreate ini digunakan untuk membuat event post
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user id yang diinputkan ada atau tidak
+ * @function checkUniqueEventId ini digunakan untuk mengecek apakah event id yang diinputkan ada atau tidak
+ * @returns mengembalikan data yang baru saja dibuat
+ * @function result ini digunakan untuk menampung data yang telah dibuat
+ * 
+ * @author cepot-blip
+*/
+
 export const EventPostCreate = async (req: Request, res: Response) => {
     try {
         const {

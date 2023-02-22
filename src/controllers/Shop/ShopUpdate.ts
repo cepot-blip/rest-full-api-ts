@@ -1,6 +1,17 @@
 import { Request, Response } from "express"
 import { ShopModels } from '../../models/Models';
 
+/**
+ * @function ShopUpdate ini digunakan untuk mengupdate toko
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id toko ada atau tidak
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user id toko ada atau tidak
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function updateShop ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+*/
 
 export const ShopUpdate = async (req: Request, res: Response) => {
     try {

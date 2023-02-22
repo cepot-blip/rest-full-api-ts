@@ -1,6 +1,17 @@
 import { Request, Response } from 'express';
 import { EventModels } from '../../models/Models';
 
+/**
+ * @function EventCreate ini digunakan untuk membuat event baru 
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data event yang baru dibuat
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+*/
+
 
 export const EventCreate = async (req: Request, res: Response) => {
     try {
@@ -38,7 +49,6 @@ export const EventCreate = async (req: Request, res: Response) => {
             success : true,
             msg : "Event created successfully!",
         })
-
 
     } catch (error) {
         res.status(500).json({

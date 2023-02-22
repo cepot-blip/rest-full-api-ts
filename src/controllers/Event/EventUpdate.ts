@@ -1,6 +1,17 @@
 import { Request, Response } from "express"
 import { EventModels } from '../../models/Models';
 
+
+/**
+ * @function EventUpdate ini digunakan untuk mengupdate data event yang sudah dibuat sebelumnya
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data event yang sudah diupdate
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+*/
+
 export const EventUpdate = async  (req: Request, res: Response)  => {
     try {
         const {id} = await req.params

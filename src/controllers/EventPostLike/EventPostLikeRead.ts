@@ -1,6 +1,21 @@
 import { Request, Response } from 'express';
 import { EventPostsLikeModels } from '../../models/Models';
 
+/**
+ * @function EventPostsLikeRead ini digunakan untuk membaca data like pada event post dengan pagination dan filter
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini adalah halaman yang akan ditampilkan
+ * @function limit ini adalah batas data yang akan ditampilkan
+ * @function skip ini adalah data yang akan dilewati
+ * @function filter ini adalah filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+ */
+
 
 export const EventPostsLikeRead= async (req: Request, res: Response) => {
     try {

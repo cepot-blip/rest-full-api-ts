@@ -1,6 +1,18 @@
 import { Request, Response } from "express"
 import { AdminModels } from '../../models/Models';
 
+/**
+ * @function AdminDelete ini digunakan untuk menghapus data admin
+ * @function checkId ini digunakan untuk mengecek apakah id yang akan dihapus ada atau tidak
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data admin yang baru dibuat
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * @throws akan mengembalikan error jika id tidak ditemukan
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+ */
 
 export const AdminDelete = async (req: Request, res: Response) => {
 	try {

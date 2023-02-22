@@ -1,6 +1,19 @@
 import { Response, Request } from "express"
 import { ProductModels } from "../../models/Models"
 
+/**
+ * @function ProductGetList ini digunakan untuk mendapatkan list product yang ada di database
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini adalah halaman yang akan ditampilkan
+ * @function limit ini adalah batas data yang akan ditampilkan
+ * @function skip ini adalah data yang akan dilewati
+ * @function filter ini adalah filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+*/
 
 export const ProductGetList = async (req : Request, res : Response) => {
     try {

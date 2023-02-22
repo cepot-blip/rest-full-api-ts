@@ -2,15 +2,20 @@ import { Request, Response } from "express"
 import bcryptjs from 'bcryptjs';
 import env from "dotenv"
 import { UsersModels } from "../../models/Models";
-
 env.config()
-
 const salt = bcryptjs.genSaltSync(10)
 
-interface JwtPayload {
-    id: number;
-    exp: number;
-}
+/**
+ * @function UsersUpdate ini digunakan untuk update data user
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id yang diinput sudah ada atau belum
+ * @function checkUniqueEmail ini digunakan untuk mengecek apakah email yang diinput sudah ada atau belum
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function result ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+*/
 
 export const UsersUpdate = async (req: Request, res: Response) => {
 	try {

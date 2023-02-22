@@ -1,6 +1,16 @@
 import { Request, Response } from "express"
 import { ShopModels } from '../../models/Models';
 
+/**
+ * @function ShopCreate ini digunakan untuk membuat toko
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user sudah memiliki toko atau belum
+ * @returns mengembalikan data yang baru saja dibuat
+ * @function createShop ini digunakan untuk menampung data yang telah dibuat
+ * 
+ * @author cepot-blip
+ */
 
 export const ShopCreate = async (req : Request, res : Response) => {
     try {

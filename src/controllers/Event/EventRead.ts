@@ -2,6 +2,22 @@ import { Request, Response } from 'express';
 import { EventModels } from '../../models/Models';
 
 
+/**
+ * @function EventRead ini digunakan untuk menampilkan data event yang sudah dibuat
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini digunakan untuk menampung data page
+ * @function limit ini digunakan untuk menampung data limit
+ * @function skip ini digunakan untuk menampung data skip
+ * @function filter ini digunakan untuk menampung data filter
+ * @function result ini digunakan untuk menampung data yang telah dibuat
+ * @returns mengembalikan data event yang sudah dibuat
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+*/
+
+
 export const EventRead= async (req: Request, res: Response) => {
     try {
         const page = parseInt(req.query.page as string) || 1;

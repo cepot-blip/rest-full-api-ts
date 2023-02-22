@@ -2,6 +2,19 @@ import { EventModels } from './../../models/Models';
 import { Request, Response } from "express"
 
 
+/**
+ * @function EventDelete ini digunakan untuk menghapus event berdasarkan id
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data event yang baru dibuat
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * @throws akan mengembalikan error jika id tidak ditemukan
+ * 
+ * @author cepot-blip
+*/
+
+
+
 export const EventDelete = async (req: Request, res: Response) => {
     try {
         const {id} = await req.body

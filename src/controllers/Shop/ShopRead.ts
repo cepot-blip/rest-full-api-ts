@@ -1,6 +1,19 @@
 import { Request, Response } from "express"
 import { ShopModels } from '../../models/Models';
 
+/**
+ * @function ShopRead ini digunakan untuk membaca toko
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini digunakan untuk menampung halaman
+ * @function limit ini digunakan untuk menampung batas data
+ * @function skip ini digunakan untuk menampung data yang akan dilewati
+ * @function filter ini digunakan untuk menampung filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+ */
 
 export const ShopRead = async (req: Request, res: Response) => {
     try {

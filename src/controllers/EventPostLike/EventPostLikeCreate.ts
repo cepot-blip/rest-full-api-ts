@@ -2,6 +2,18 @@ import { Request, Response } from 'express';
 import { EventPostsLikeModels } from '../../models/Models';
 
 
+/**
+ * @function EventPostLikeCreate ini digunakan untuk membuat like pada event post
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user id yang diinputkan ada atau tidak
+ * @function checkUniqueEventPostId ini digunakan untuk mengecek apakah event post id yang diinputkan ada atau tidak\
+ * @returns mengembalikan data yang baru saja dibuat
+ * 
+ * @author cepot-blip
+ */
+
+
 export const EventPostLikeCreate = async (req: Request, res: Response)=> {
     try {
         const {

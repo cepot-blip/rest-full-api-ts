@@ -3,15 +3,26 @@ import jwt from "jsonwebtoken"
 import env from "dotenv"
 import cryptoJs from "crypto-js"
 import { UsersModels } from "../../models/Models";
-
 env.config()
+
+/**
+ * @interface JwtPayload ini digunakan untuk mendefinisikan tipe data dari token
+ * @param id ini adalah id dari user
+ * @param exp ini adalah waktu expired dari token
+ * @function UsersAuth ini digunakan untuk melakukan autentikasi user
+ * @async ini digunakan untuk menandakan bahwa fungsi ini bersifat asynchronous 
+ * @type Promise<unknown> ini digunakan untuk menandakan bahwa fungsi ini mengembalikan nilai promise
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * 
+ * @author cepot-blip
+*/
 
 
 interface JwtPayload {
     id: number;
     exp: number;
 }
-
 
 export const UsersAuth = async (req: Request, res: Response): Promise<unknown> => {
     try {
@@ -37,7 +48,7 @@ export const UsersAuth = async (req: Request, res: Response): Promise<unknown> =
       if (verify.exp < Date.now() / 1000) {
         return res.status(401).json({
           success: false,
-          error: "Token Expired",
+          error: "Token Expired!",
         });
       }
   

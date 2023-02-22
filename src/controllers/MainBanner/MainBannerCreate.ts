@@ -1,6 +1,15 @@
 import { MainBannerModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
+/**
+ * @function MainBannerCreate ini digunakan untuk membuat main banner
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data yang baru saja dibuat
+ * @function result ini digunakan untuk menampung data yang telah dibuat
+ * 
+ * @author cepot-blip
+ */
 
 export const MainBannerCreate = async (req: Request, res: Response) => {
     try {

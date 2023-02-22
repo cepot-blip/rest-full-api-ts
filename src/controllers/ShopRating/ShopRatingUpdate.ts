@@ -1,6 +1,18 @@
 import { Request, Response } from "express"
 import { ShopRatingModels } from '../../models/Models';
 
+/**
+ * @function ShopRatingUpdate ini digunakan untuk mengupdate rating toko
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id rating toko ada atau tidak
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah id user ada atau tidak
+ * @function checkUniqueShopId ini digunakan untuk mengecek apakah id toko ada atau tidak
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function result ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+*/
 
 export const ShopRatingUpdate = async (req : Request, res : Response) => {
     try {

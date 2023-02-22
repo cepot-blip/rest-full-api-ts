@@ -4,11 +4,18 @@ import bcryptjs from 'bcryptjs';
 import env from "dotenv"
 import cryptoJs from "crypto-js"
 import { UsersModels } from "../../models/Models";
-
 env.config()
-
 const salt = bcryptjs.genSaltSync(10)
 
+/**
+ * @function UsersCreate ini digunakan untuk membuat user baru
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueEmail ini digunakan untuk mengecek apakah email yang diinput sudah ada atau belum
+ * @returns mengembalikan data yang baru saja dibuat
+ * 
+ * @author cepot-blip
+ */
 
 
 export const UsersCreate = async (req: Request, res: Response) => {

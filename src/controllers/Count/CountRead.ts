@@ -1,6 +1,21 @@
 import { Request, Response } from "express"
 import { EventModels, MainBannerModels, ProductCategoryModels, ProductModels, ShopModels, UsersModels } from "./../../models/Models"
 
+/**
+ * @function CountRead ini digunakan untuk menghitung jumlah data dari setiap tabel
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan jumlah data dari setiap tabel
+ * @function user_count ini digunakan untuk menghitung jumlah data dari tabel users
+ * @function shop_count ini digunakan untuk menghitung jumlah data dari tabel shops
+ * @function product_count ini digunakan untuk menghitung jumlah data dari tabel products
+ * @function category_count ini digunakan untuk menghitung jumlah data dari tabel product_categories
+ * @function event_count ini digunakan untuk menghitung jumlah data dari tabel events
+ * @function banner_count ini digunakan untuk menghitung jumlah data dari tabel main_banners
+ * 
+ * @author cepot-blip
+ *  */
+
 const CountRead = async (req: Request, res: Response) => {
     try {
         const user_count = await UsersModels.count()

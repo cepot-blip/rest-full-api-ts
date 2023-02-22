@@ -3,8 +3,20 @@ import jwt from "jsonwebtoken"
 import cryptoJs from "crypto-js"
 import { AdminModels } from "../../models/Models";
 import env from "dotenv"
-
 env.config()
+
+/** 
+  * @interface JwtPayload ini digunakan untuk mendefinisikan tipe data dari token 
+  * @param id ini adalah id dari user
+  * @param exp ini adalah waktu expired dari token
+  * @function AdminAuth ini digunakan untuk melakukan autentikasi admin
+  * @async ini digunakan untuk menandakan bahwa fungsi ini bersifat asynchronous
+  * @type Promise<unknown> ini digunakan untuk menandakan bahwa fungsi ini mengembalikan nilai promise
+  * @param req ini adalah request dari client
+  * @param res ini adalah response dari server
+  * 
+  * @author cepot-blip
+*/
 
 interface JwtPayload {
     id: number;

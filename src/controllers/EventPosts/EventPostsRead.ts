@@ -1,6 +1,19 @@
 import { EventPostsModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
+/**
+ * @function EventPostsRead ini digunakan untuk menampilkan event post yang ada di database
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function page ini digunakan untuk menentukan halaman yang akan ditampilkan
+ * @function limit ini digunakan untuk menentukan batas data yang akan ditampilkan
+ * @function skip ini digunakan untuk menentukan data yang akan dilewati
+ * @function filter ini digunakan untuk menentukan filter yang akan digunakan untuk menampilkan data yang diinginkan
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+ */
 
 export const EventPostsLikeRead= async (req: Request, res: Response) => {
     try {

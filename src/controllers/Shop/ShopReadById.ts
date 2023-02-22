@@ -1,6 +1,19 @@
 import { Request, Response } from "express"
 import { ShopModels } from '../../models/Models';
 
+/**
+ * @function ShopReadById ini digunakan untuk membaca toko berdasarkan id
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @param id ini adalah id toko yang akan dibaca
+ * @param page ini adalah halaman yang akan dibaca
+ * @param limit ini adalah batas data yang akan dibaca
+ * @param skip ini adalah data yang akan dilewati
+ * @returns mengembalikan data yang telah dibaca
+ * @function result ini digunakan untuk menampung data yang telah dibaca
+ * 
+ * @author cepot-blip
+*/
 
 export const ShopReadById = async (req: Request, res: Response) => {
     try {

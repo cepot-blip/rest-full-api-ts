@@ -4,12 +4,26 @@ import bcryptjs from 'bcryptjs';
 import cryptoJs from "crypto-js"
 import env from "dotenv"
 import { AdminModels } from '../../models/Models';
-
 env.config()
-
 const salt = bcryptjs.genSaltSync(10)
 
+/**
+ * @function AdminCreate ini digunakan untuk membuat admin baru
+ * @function checkUniqueEmail ini digunakan untuk mengecek apakah email sudah terdaftar atau belum
+ * @function token ini digunakan untuk membuat token
+ * @function hashToken ini digunakan untuk mengenkripsi token
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data admin yang baru dibuat
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * @throws akan mengembalikan error jika email sudah terdaftar
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * 
+ * @author cepot-blip
+ */
 
+
+//		CREATE ADMIN
 export const AdminCreate = async (req: Request, res: Response) => {
 	try {
 		const {

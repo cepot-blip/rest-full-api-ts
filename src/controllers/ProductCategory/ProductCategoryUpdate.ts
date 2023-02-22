@@ -1,7 +1,16 @@
 import { Response, Request } from "express"
 import { ProductCategoryModels } from '../../models/Models';
 
-
+/**
+ * @function ProductCategoryUpdate ini digunakan untuk mengupdate kategori produk   
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id yang diinputkan ada atau tidak
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function result ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+*/
 
 export const ProductCategoryUpdate = async (req : Request, res : Response) => {
     try {

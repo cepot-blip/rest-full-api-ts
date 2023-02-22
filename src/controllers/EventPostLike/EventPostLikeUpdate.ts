@@ -1,6 +1,19 @@
 import { Request, Response } from 'express';
 import { EventPostsLikeModels } from '../../models/Models';
 
+/**
+ * @function EventPostLikeUpdate ini digunakan untuk mengupdate like pada event post
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id yang diinputkan ada atau tidak
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user id yang diinputkan ada atau tidak
+ * @function checkUniqueEventPostId ini digunakan untuk mengecek apakah event post id yang diinputkan ada atau tidak
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function result ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+ */
+
 
 export const EventPostLikeUpdate= async (req: Request, res: Response) => {
     try {

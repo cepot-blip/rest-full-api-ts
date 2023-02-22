@@ -1,6 +1,16 @@
 import { Request, Response } from "express"
 import { ShopModels } from '../../models/Models';
 
+/**
+ * @function ShopDelete ini digunakan untuk menghapus toko
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id toko ada atau tidak
+ * @returns mengembalikan data yang baru saja dihapus
+ * @function deleteShop ini digunakan untuk menampung data yang telah dihapus
+ * 
+ * @author cepot-blip
+ */
 
 export const ShopDelete = async (req: Request, res: Response) => {
     try {

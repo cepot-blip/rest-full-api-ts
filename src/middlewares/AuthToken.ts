@@ -4,6 +4,19 @@ import { Response, Request } from "express"
 import cryptoJs from "crypto-js"
 env.config()
 
+/**
+ * @function authCheck ini digunakan untuk melakukan autentikasi user
+ * @interface JwtPayload ini digunakan untuk mendefinisikan tipe data dari token 
+ * @param id ini adalah id dari user
+ * @param exp ini adalah waktu expired dari token
+ * @param next ini adalah fungsi yang akan dijalankan setelah fungsi authCheck selesai
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @throws mengembalikan nilai promise
+ * 
+ * @author cepot-blip
+*/
+
 interface JwtPayload {
     id: number;
     exp: number;

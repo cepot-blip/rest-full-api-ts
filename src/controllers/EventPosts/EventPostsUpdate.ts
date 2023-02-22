@@ -1,6 +1,18 @@
 import { EventPostsModels } from './../../models/Models';
 import { Request, Response } from 'express';
 
+/**
+ * @function EventPostUpdate ini digunakan untuk mengupdate event post
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function checkUniqueId ini digunakan untuk mengecek apakah id yang diinputkan ada atau tidak
+ * @function checkUniqueUserId ini digunakan untuk mengecek apakah user id yang diinputkan ada atau tidak
+ * @function checkUniqueEventId ini digunakan untuk mengecek apakah event id yang diinputkan ada atau tidak
+ * @returns mengembalikan data yang baru saja diupdate
+ * @function result ini digunakan untuk menampung data yang telah diupdate
+ * 
+ * @author cepot-blip
+ */
 
 export const EventPostUpdate = async (req: Request, res: Response) => {
     try {

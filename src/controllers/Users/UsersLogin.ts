@@ -6,12 +6,31 @@ import cryptoJs from "crypto-js"
 import { UsersModels } from "../../models/Models";
 env.config()
 
+/**
+ * @interface JwtPayload ini digunakan untuk mendefinisikan tipe data dari token 
+ * @param id ini adalah id dari user
+ * @param exp ini adalah waktu expired dari token
+ * @function UsersLogin ini digunakan untuk melakukan login user
+ * @async ini digunakan untuk menandakan bahwa fungsi ini bersifat asynchronous
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @returns mengembalikan data user yang baru saja dibuat
+ * @returns mengembalikan pesan error jika email tidak ditemukan
+ * @returns mengembalikan pesan error jika password tidak sesuai
+ * @returns mengembalikan pesan error jika terjadi kesalahan pada server
+ * @function comparePassword ini digunakan untuk membandingkan password yang diinput dengan password yang ada di database
+ * @function token ini digunakan untuk membuat token
+ * @function sign ini digunakan untuk membuat token
+ * @function verify ini digunakan untuk memverifikasi token
+ * 
+ * @author cepot-blip
+ */
+
 
 interface JwtPayload {
     id: number;
     exp: number;
 }
-
 
 export const UsersLogin = async (req: Request, res: Response) => {
 	try {

@@ -4,10 +4,24 @@ import bcryptjs from 'bcryptjs';
 import cryptoJs from "crypto-js"
 import { AdminModels } from "../../models/Models";
 import env from "dotenv"
-
 env.config()
 
-
+/**
+ * @function AdminLogin ini digunakan untuk melakukan login admin
+ * @param req ini adalah request dari client
+ * @param res ini adalah response dari server
+ * @function adminCheck ini digunakan untuk mengecek apakah email sudah terdaftar atau belum
+ * @function comparePassword ini digunakan untuk mengecek apakah password yang dimasukkan sama dengan password yang ada di database
+ * @function token ini digunakan untuk membuat token yang akan digunakan untuk autentikasi
+ * @function hashToken ini digunakan untuk mengenkripsi token yang akan digunakan untuk autentikasi
+ * @returns mengembalikan token yang sudah dienkripsi
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * @throws akan mengembalikan error jika email tidak terdaftar
+ * @throws akan mengembalikan error jika terjadi kesalahan pada server
+ * setHeader ini digunakan untuk mengatur akses dari client ke server
+ * 
+ * @author cepot-blip	
+ */
 
 export const AdminLogin = async (req: Request, res: Response) => {
 	try {
