@@ -16,7 +16,7 @@ import { EventModels, MainBannerModels, ProductCategoryModels, ProductModels, Sh
  * @author cepot-blip
  *  */
 
-const CountRead = async (req: Request, res: Response) => {
+export const CountRead = async (req: Request, res: Response) => {
     try {
         const user_count = await UsersModels.count()
         const shop_count = await ShopModels.count()
@@ -36,5 +36,3 @@ const CountRead = async (req: Request, res: Response) => {
         })
     }
 }
-
-export default CountRead

@@ -4,7 +4,7 @@ import { EventPostLikeDelete } from './EventPostLikeDelete';
 import { EventPostLikeUpdate } from './EventPostLikeUpdate';
 
 
-export const  EventPostLikeControllers = {
+export {
     EventPostLikeCreate,
     EventPostLikeDelete,
     EventPostsLikeRead,

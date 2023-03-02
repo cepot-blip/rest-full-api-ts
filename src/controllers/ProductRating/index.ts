@@ -4,7 +4,7 @@ import { ProductRatingUpdate } from './ProductRatingUpdate';
 import { ProductRatingDelete } from './ProductRatingDelete';
 
 
-export const ProductRatingControllers = {
+export {
     ProductRatingCreate,
     ProductRatingRead,
     ProductRatingUpdate,

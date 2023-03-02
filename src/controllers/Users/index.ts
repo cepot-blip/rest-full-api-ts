@@ -6,7 +6,7 @@ import { UsersDelete } from './UsersDelete';
 import { UsersAuth } from './UsersAuth';
 
 
-export const UsersControllers = {
+export {
     UsersCreate,
     UsersRead,
     UsersLogin,

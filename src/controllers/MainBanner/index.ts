@@ -5,7 +5,7 @@ import { MainBannerUpdate } from './MainBannerUpdate';
 
 
 
-export const MainBannerControllers = {
+export {
     MainBannerCreate,
     MainBannerDelete,
     MainBannerRead,

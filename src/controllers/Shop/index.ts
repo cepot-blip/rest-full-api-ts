@@ -5,7 +5,7 @@ import { ShopUpdate } from './ShopUpdate';
 import { ShopDelete } from './ShopDelete';
 
 
-export const ShopControllers = {
+export {
     ShopCreate,
     ShopRead,
     ShopReadById,

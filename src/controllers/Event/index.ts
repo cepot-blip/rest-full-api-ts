@@ -11,7 +11,7 @@ import { EventDelete } from './EventDelete';
  */
 
 
-export const EventControllers = {
+export {
     EventRead,
     EventCreate,
     EventUpdate,

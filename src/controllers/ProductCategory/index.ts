@@ -4,7 +4,7 @@ import { ProductCategoryUpdate } from './ProductCategoryUpdate';
 import { ProductCategoryDelete } from './ProductCategoryDelete';
 
 
-export const ProductCategoryControllers = {
+export {
     ProductCategoryCreate,
     ProductCategoryRead,
     ProductCategoryUpdate,

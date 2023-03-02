@@ -1,6 +1,6 @@
-import CountRead from './CountRead';
+import { CountRead } from './CountRead';
 
 
-export const CountControllers = {
+export {
     CountRead
 }

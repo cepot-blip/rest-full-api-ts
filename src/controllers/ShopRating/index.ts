@@ -4,7 +4,7 @@ import { ShopRatingUpdate } from './ShopRatingUpdate';
 import { ShopRatingDelete } from './ShopRatingDelete';
 
 
-export const ShopRatingControllers = {
+export {
     ShopRatingCreate,
     ShopRatingReadAll,
     ShopRatingUpdate,

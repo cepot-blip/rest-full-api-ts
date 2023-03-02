@@ -1,12 +1,15 @@
 import { SuperAdminAuth } from './../../controllers/Admin/SuperAdminAuth';
 import express from "express"
 import { rateLimit } from "express-rate-limit"
-import { AdminCreate } from "../../controllers/Admin/AdminCreate";
-import { AdminAuth } from "../../controllers/Admin/AdminAuth";
-import { AdminDelete } from "../../controllers/Admin/AdminDelete";
-import { AdminUpdate } from "../../controllers/Admin/AdminUpdate";
-import { AdminLogin } from '../../controllers/Admin/AdminLogin';
-import { AdminRead } from '../../controllers/Admin/AdminRead';
+import { 
+	AdminCreate,
+	AdminLogin,
+	AdminRead,
+	AdminUpdate,
+	AdminDelete,
+	AdminAuth,
+ } from "../../controllers/Admin";
+
 
 const AdminRoutes = express.Router()
 
@@ -20,7 +23,7 @@ const LimitLogin = rateLimit({
 
 //      CREATE USER ROUTES
 AdminRoutes.post("/admin/create", AdminCreate)
-AdminRoutes.post("/admin/login", AdminLogin, LimitLogin)
+AdminRoutes.post("/admin/login", LimitLogin ,AdminLogin)
 AdminRoutes.post("/admin/read", AdminRead)
 AdminRoutes.put("/admin/update/:id", AdminUpdate)
 AdminRoutes.delete("/admin/delete", AdminDelete)

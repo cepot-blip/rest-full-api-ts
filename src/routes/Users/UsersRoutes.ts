@@ -19,7 +19,7 @@ const LimitLogin = rateLimit({
 
 //      CREATE USER ROUTES
 UsersRoutes.post("/users/create", UsersCreate)
-UsersRoutes.post("/users/login", UsersLogin, LimitLogin)
+UsersRoutes.post("/users/login",LimitLogin ,UsersLogin)
 UsersRoutes.post("/users/read", UsersRead)
 UsersRoutes.put("/users/update/:id", UsersUpdate)
 UsersRoutes.delete("/users/delete", UsersDelete)

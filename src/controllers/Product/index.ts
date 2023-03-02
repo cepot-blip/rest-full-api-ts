@@ -6,7 +6,7 @@ import { ProductDelete } from './ProductDelete';
 import { ProductGetList } from './ProductList';
 
 
-export const ProductControllers = {
+export {
     ProductCreate,
     ProductRead,
     ProductReadById,

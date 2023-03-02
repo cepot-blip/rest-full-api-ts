@@ -15,7 +15,7 @@ import { SuperAdminAuth } from './SuperAdminAuth';
  */
 
 
-export const AdminControllers = {
+export {
     AdminCreate,
     AdminLogin,
     AdminRead,
