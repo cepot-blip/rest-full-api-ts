@@ -22,7 +22,7 @@ export const ProductCreate = async (req : Request, res : Response) => {
             images
         } = await req.body
 
-        const result = await ProductModels.create({
+        await ProductModels.create({
             data: {
                 category_id: parseInt(category_id),
                 shop_id: parseInt(shop_id),

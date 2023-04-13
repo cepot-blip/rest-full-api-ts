@@ -29,7 +29,7 @@ export const EventPostLikeDelete = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await EventPostsLikeModels.delete({
+        await EventPostsLikeModels.delete({
             where : {
                 id : parseInt(id)
             }

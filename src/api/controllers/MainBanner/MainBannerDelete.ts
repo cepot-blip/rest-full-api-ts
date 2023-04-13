@@ -27,7 +27,7 @@ export const MainBannerDelete = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await MainBannerModels.delete({
+        await MainBannerModels.delete({
             where : {
                 id : parseInt(id)
             }

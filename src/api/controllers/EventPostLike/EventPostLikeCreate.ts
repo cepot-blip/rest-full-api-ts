@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import { EventPostsLikeModels } from '../../../models/Models'
 
-
 /**
  * @function EventPostLikeCreate ini digunakan untuk membuat like pada event post
  * @param req ini adalah request dari client
@@ -47,7 +46,7 @@ export const EventPostLikeCreate = async (req: Request, res: Response)=> {
             })
         }
 
-        const result = await EventPostsLikeModels.create({
+        await EventPostsLikeModels.create({
             data : {
                 user_id : parseInt(user_id),
                 event_post_id : parseInt(event_post_id)

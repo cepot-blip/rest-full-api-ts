@@ -27,11 +27,6 @@ env.config()
  */
 
 
-interface JwtPayload {
-    id: number;
-    exp: number;
-}
-
 export const UsersLogin = async (req: Request, res: Response) => {
 	try {
 		const { email, password } = await req.body
@@ -49,7 +44,7 @@ export const UsersLogin = async (req: Request, res: Response) => {
 			return
 		}
 
-		const comparePassword = await bcryptjs.compareSync(password, Usercheck.password)
+		await bcryptjs.compareSync(password, Usercheck.password)
 
 		const token = await jwt.sign(
 			{

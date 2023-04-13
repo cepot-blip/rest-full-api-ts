@@ -28,7 +28,7 @@ export const EventPostDelete = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await EventPostsModels.delete({
+        await EventPostsModels.delete({
             where : {
                 id : parseInt(id)
             }

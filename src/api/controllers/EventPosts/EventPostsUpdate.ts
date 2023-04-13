@@ -58,7 +58,7 @@ export const EventPostUpdate = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await EventPostsModels.update({
+        await EventPostsModels.update({
             where : {
                 id : parseInt(id)
             },

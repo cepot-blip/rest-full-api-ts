@@ -20,7 +20,7 @@ export const MainBannerCreate = async (req: Request, res: Response) => {
             aggregate
         } = await req.body
 
-        const result = await MainBannerModels.create({
+        await MainBannerModels.create({
             data : {
                 images : images,
                 description : description,

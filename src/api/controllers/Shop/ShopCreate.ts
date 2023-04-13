@@ -42,7 +42,7 @@ export const ShopCreate = async (req : Request, res : Response) => {
             })
         }
 
-        const createShop = await ShopModels.create({
+        await ShopModels.create({
             data: {
                 user_id: parseInt(user_id),
                 name: name,

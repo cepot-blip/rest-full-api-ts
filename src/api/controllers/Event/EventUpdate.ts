@@ -1,7 +1,6 @@
 import { Request, Response } from "express"
 import { EventModels } from '../../../models/Models'
 
-
 /**
  * @function EventUpdate ini digunakan untuk mengupdate data event yang sudah dibuat sebelumnya
  * @param req ini adalah request dari client
@@ -14,7 +13,7 @@ import { EventModels } from '../../../models/Models'
 
 export const EventUpdate = async  (req: Request, res: Response)  => {
     try {
-        const {id} = await req.params
+        const { id } = await req.params
         const data = await req.body
 
         const checkUniqueId = await EventModels.findUnique({
@@ -30,7 +29,7 @@ export const EventUpdate = async  (req: Request, res: Response)  => {
             })
         }
 
-        const updateEvent = await EventModels.update({
+        await EventModels.update({
             where : {
                 id : parseInt(id)
             },

@@ -26,8 +26,6 @@ export const ProductReadById = async (req : Request, res : Response) => {
                 },
                 _count: true
             },
-
-
         })
 
         if (!result) {

@@ -59,7 +59,7 @@ export const AdminUpdate = async (req: Request, res: Response) => {
 		}
 
 
-		const result = await AdminModels.update({
+		await AdminModels.update({
 			where: {
 				id: parseInt(id),
 			},

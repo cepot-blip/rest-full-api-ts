@@ -30,7 +30,7 @@ export const ProductCategoryUpdate = async (req : Request, res : Response) => {
             })
         }
 
-        const result = await ProductCategoryModels.update({
+        await ProductCategoryModels.update({
             where: {
                 id: parseInt(id)
             },

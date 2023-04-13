@@ -49,7 +49,7 @@ export const EventPostCreate = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await EventPostsModels.create({
+        await EventPostsModels.create({
             data : {
                 user_id : parseInt(user_id),
                 event_id : parseInt(event_id),

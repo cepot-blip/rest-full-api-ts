@@ -28,7 +28,7 @@ export const ShopRatingDelete = async (req : Request, res : Response) => {
             })
         }
 
-        const result = await ShopRatingModels.delete({
+        await ShopRatingModels.delete({
             where : {
                 id : parseInt(id)
             }

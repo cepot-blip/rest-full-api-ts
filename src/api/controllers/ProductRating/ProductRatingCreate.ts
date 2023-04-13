@@ -49,7 +49,7 @@ export const ProductRatingCreate = async (req : Request, res : Response) => {
         }
 
 
-        const result = await ProductRatingModels.create({
+        await ProductRatingModels.create({
             data: {
                 product_id: parseInt(product_id),
                 user_id: parseInt(user_id),

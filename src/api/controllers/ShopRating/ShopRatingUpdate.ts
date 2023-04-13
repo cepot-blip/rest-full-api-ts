@@ -62,7 +62,7 @@ export const ShopRatingUpdate = async (req : Request, res : Response) => {
             })
         }
 
-        const result = await ShopRatingModels.update({
+        await ShopRatingModels.update({
             where : {
                 id : parseInt(id)
             },

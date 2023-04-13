@@ -31,7 +31,7 @@ export const AdminDelete = async (req: Request, res: Response) => {
 			})
 		}
 
-		const result = await AdminModels.delete({
+		await AdminModels.delete({
 			where: {
 				id: parseInt(id),
 			},

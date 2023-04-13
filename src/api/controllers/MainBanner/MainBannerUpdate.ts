@@ -29,7 +29,7 @@ export const MainBannerUpdate = async (req: Request, res: Response) => {
             })
         }
 
-        const result = await MainBannerModels.update({
+        await MainBannerModels.update({
             where : {
                 id : parseInt(id)
             },

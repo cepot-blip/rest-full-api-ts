@@ -40,7 +40,7 @@ export const AdminLogin = async (req: Request, res: Response) => {
 			return
 		}
 
-		const comparePassword = await bcryptjs.compareSync(password, adminCheck.password)
+		await bcryptjs.compareSync(password, adminCheck.password)
 
 		const token = await jwt.sign(
 			{

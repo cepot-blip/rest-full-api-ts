@@ -27,7 +27,7 @@ export const ShopDelete = async (req: Request, res: Response) => {
             })
         }
 
-        const deleteShop = await ShopModels.delete({
+        await ShopModels.delete({
             where: {
                 id: parseInt(id)
             }

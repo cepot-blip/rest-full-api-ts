@@ -31,7 +31,7 @@ export const EventDelete = async (req: Request, res: Response) => {
             })
         }
 
-        const deleteEvent = await EventModels.delete({
+        await EventModels.delete({
             where : {
                 id : parseInt(id)
             }

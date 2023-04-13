@@ -57,7 +57,7 @@ export const UsersUpdate = async (req: Request, res: Response) => {
 		}
 
 
-		const result = await UsersModels.update({
+		await UsersModels.update({
 			where: {
 				id: parseInt(id),
 			},

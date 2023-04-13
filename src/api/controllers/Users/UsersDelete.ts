@@ -29,7 +29,7 @@ export const UsersDelete = async (req: Request, res: Response) => {
 			})
 		}
 
-		const result = await UsersModels.delete({
+		await UsersModels.delete({
 			where: {
 				id: parseInt(id),
 			},

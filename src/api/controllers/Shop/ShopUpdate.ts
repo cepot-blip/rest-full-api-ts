@@ -57,7 +57,7 @@ export const ShopUpdate = async (req: Request, res: Response) => {
             })
         }
 
-        const updateShop = await ShopModels.update({
+        await ShopModels.update({
             where: {
                 id: parseInt(id)
             },

@@ -58,7 +58,7 @@ export const EventPostLikeUpdate= async (req: Request, res: Response) => {
             })
         }
 
-        const result = await EventPostsLikeModels.update({
+        await EventPostsLikeModels.update({
             where : {
                 id : parseInt(id)
             },

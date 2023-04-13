@@ -48,7 +48,7 @@ export const ShopRatingCreate = async (req : Request, res : Response) => {
             })
         }
 
-        const result = await ShopRatingModels.create({
+        await ShopRatingModels.create({
             data: {
                 shop_id: parseInt(shop_id),
                 user_id: parseInt(user_id),

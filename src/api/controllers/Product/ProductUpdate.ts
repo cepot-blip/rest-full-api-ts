@@ -59,7 +59,7 @@ export const ProductUpdate = async (req : Request, res : Response) => {
             })
         }
 
-        const result = await ProductModels.update({
+        await ProductModels.update({
             where: {
                 id: parseInt(id)
             },

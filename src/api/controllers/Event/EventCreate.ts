@@ -29,7 +29,7 @@ export const EventCreate = async (req: Request, res: Response) => {
             end_date,
         } = await req.body
 
-        const createEvent = await EventModels.create({
+        await EventModels.create({
             data : {
                 name : name,
                 description : description,

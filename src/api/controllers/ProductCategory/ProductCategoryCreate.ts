@@ -19,7 +19,7 @@ export const ProductCategoryCreate = async (req : Request, res : Response) => {
             aggregate
         } = await req.body
 
-        const result = await ProductCategoryModels.create({
+        await ProductCategoryModels.create({
             data: {
                 name: name,
                 description: description,
