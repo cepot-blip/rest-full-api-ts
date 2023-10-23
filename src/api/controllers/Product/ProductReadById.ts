@@ -35,7 +35,7 @@ export const ProductReadById = async (req : Request, res : Response) => {
             })
         }
 
-        const removePass = delete result.Shop.Users.password
+        delete result.Shop.Users.password
 
         res.status(200).json({
             success: true,
